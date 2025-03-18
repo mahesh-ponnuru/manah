@@ -391,6 +391,7 @@ margin-left: 140px;
 .inner-styles .about.section .paragraph h5{text-transform: uppercase; font-size: 14px; font-weight: 700;}
 .inner-styles .about.section .paragraph h2{font-weight: 700; margin-bottom: 20px; }
 .inner-styles .about.section .paragraph p{font-size: 15px;}
+.inner-styles .navmenu>ul>li>a{text-shadow:none !important;}
 .btn-learnmore{background: #000910;
   color: var(--contrast-color);
   font-weight: 400;
@@ -721,6 +722,19 @@ margin-left: 140px;
   .contact .info-item{min-height: 180px !important;}
   .video-tags .banner h4,
   .video-tags .banner h2{font-size: 22px !important;}
+}
+@media (max-width: 575px) {
+  .header .navmenu {
+    margin-left: auto;
+    margin-right: 0 !important;
+    }
+  .section-title h2{line-height: normal !important;}
+  .video-tags .banner h2, .video-tags .banner h4{padding: 15px 10px 10px 10px !important;}
+  .banner{height: 85px !important;align-items: end;}
+  .navmenu a, .navmenu a:focus{font-size: 16px !important;}
+  .mobile-nav-toggle{font-size: 34px; margin-right: 0px;}
+  .navmenu .dropdown ul{margin: 0px 10px; padding: 0;}
+  .navmenu .dropdown ul li a{padding: 10px 15px;}
 }
 /*--------------------------------------------------------------
 # Global Footer
