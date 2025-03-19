@@ -1015,7 +1015,7 @@ position: absolute;
 .video-tags .banner h2, .video-tags .banner h4{color: #252e35; text-transform: uppercase; 
   background-color: #ffffff8a; width: 100%;  border-bottom: 5px solid #e2b6174c;
   padding: 15px 50px 10px 75px; font-weight: 500; }
-.video-tags .banner h2.cap-d span{color: #e2b617; font-weight: 700;}
+.video-tags .banner h2.cap-d span{color: #e2b617; font-weight: 700; text-shadow: 1px 1px 1px #585858;}
 
 .page-title:before {
   content: "";
