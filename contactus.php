@@ -1,3 +1,7 @@
+<?php
+error_reporting(0);
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -122,7 +126,7 @@
         <img src="assets/img/form-bg.jpg" class="testimonials-bg" alt="bg">
         <div class="container section-title contact pb-0" data-aos="fade-up" data-aos-delay="100">
           <div class="form-contact">
-            <form action="forms/contact.php" method="post" class="php-email-form">
+            <form action="forms/mail.php" method="post" class="php-email-form">
               <div class="row gy-4">
                 <div class="mx-1">
                   <h2>We Would like to hear from you</h2>
@@ -130,41 +134,43 @@
                 </div>
                 <div class="col-md-6">
                 <div class="input">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name *" required="">
+                  <input type="text" name="fname" id="fname" class="form-control" placeholder="Your Name *" required="">
                 </div>
               </div>
 
               <div class="col-md-6">
-                <input type="email" class="form-control" name="email" placeholder="Your Email *" required="">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email *" required="">
               </div>
 
               <div class="col-md-6">
-                <input type="text" class="form-control" name="subject" placeholder="Subject *" required="">
+                <input type="text" class="form-control" name="sbj" id="sbj" placeholder="Subject *" required="">
               </div>
               <div class="col-md-6">
-                <input type="text" class="form-control" name="company" placeholder="Company *" required="">
+                <input type="text" class="form-control" name="company" id="company" placeholder="Company *" required="">
               </div>
               <div class="col-md-6">
-                <input type="text" class="form-control" name="website" placeholder="Website *" required="">
+                <input type="text" class="form-control" name="website" id="website" placeholder="Website *" required="">
               </div>
               <div class="col-md-6">
-                <select class="form-control" name="query" required="">
+                <select class="form-control" name="query" id="query" required="">
                   <option value="0">Your Query for *</option>  
                   <option value="0">Your Query One</option>  
+                  <option value="0">Your Query two</option>  
+                  <option value="0">Your Query three</option>  
                 </select>
               </div>
 
               <div class="col-md-6">
-                <textarea class="form-control" name="message" rows="4" placeholder="Message *" required=""></textarea>
-              <div class="text-center">
+                <textarea class="form-control" name="msg" id="msg" rows="4" placeholder="Message *" required=""></textarea>
+              <!-- <div class="text-center">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
+              </div> -->
               </div>
               <div class="col-md-6 d-flex">
                 <div class="d-flex align-items-end">
-                <button type="submit">Send Message</button></div>
+                <button type="submit" id="submit" name="submit">Send Message</button></div>
               </div>
 
             </div>
