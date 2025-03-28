@@ -94,14 +94,14 @@
   /**
    * Initiate glightbox
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+  // const glightbox = GLightbox({
+  //   selector: '.glightbox'
+  // });
 
   /**
    * Initiate Pure Counter
    */
-  new PureCounter();
+  // new PureCounter();
 
   /**
    * Init swiper sliders
