@@ -27,7 +27,158 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .slider {
+        position: relative;
+        width: 100%;
+        height: 555px;
+        overflow: hidden;
+    }
+    .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        font-size: 2rem;
+        
+        color: white;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+        text-transform:uppercase;
+    }
+    .title >span{font-weight: 600; color: darkgoldenrod; text-transform:uppercase;}
+    .slide:nth-child(1) { background-image: url('assets/img/slides/slide1.jpg'); }
+    .slide:nth-child(2) { background-image: url('assets/img/slides/slide2.jpg'); }
+    .slide:nth-child(3) { background-image: url('assets/img/slides/slide3.jpg'); }
+    .slide:nth-child(4) { background-image: url('assets/img/slides/slide4.jpg'); }
+    .slide:nth-child(5) { background-image: url('assets/img/slides/slide5.jpg'); }
+    .slide:nth-child(6) { background-image: url('assets/img/slides/slide6.jpg'); }
+    .slide:nth-child(7) { background-image: url('assets/img/slides/slide7.jpg'); }
+    .slide:nth-child(8) { background-image: url('assets/img/slides/slide8.jpg'); }
+    .slide:nth-child(9) { background-image: url('assets/img/slides/slide9.jpg'); }
+    .slide:nth-child(10) { background-image: url('assets/img/slides/slide10.jpg'); }
+    .slide:nth-child(11) { background-image: url('assets/img/slides/slide11.jpg'); }
+    .slide:nth-child(12) { background-image: url('assets/img/slides/slide12.jpg'); }
+    .slide:nth-child(13) { background-image: url('assets/img/slides/slide13.jpg'); }
+    .slide:nth-child(14) { background-image: url('assets/img/slides/slide14.jpg'); }
+    .active {
+        opacity: 1;
+    }
+    .title {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px 60px;
+        opacity: 0;
+        bottom: 6px;
+        border-bottom: 5px solid #e2b6175e;
+        width: 100%;
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    }
+    .slide.active .title {
+        opacity: 1;
+    }
+    .slide:nth-child(1) .title {
+        transform: translateX(-500px);
+    }
+    .slide.active:nth-child(1) .title {
+        transform: translateX(0);
+    }
 
+    .slide:nth-child(2) .title {
+        transform: translateX(500px);
+    }
+    .slide.active:nth-child(2) .title {
+        transform: translateX(0);
+    }
+
+    .slide:nth-child(3) .title {
+        transform: translateY(-500px);
+    }
+    .slide.active:nth-child(3) .title {
+        transform: translateY(0);
+    }
+
+    .slide:nth-child(4) .title {
+        transform: scale(0.5);
+    }
+    .slide.active:nth-child(4) .title {
+        transform: scale(1);
+    }
+
+    .slide:nth-child(5) .title {
+        transform: translateX(0);
+    }
+    .slide.active:nth-child(5) .title {
+        transform: translateX(100);
+    }
+
+    .slide:nth-child(6) .title {
+        transform: translateX(500px);
+    }
+    .slide.active:nth-child(6) .title {
+        transform: translateX(0);
+    }
+
+    .slide:nth-child(7) .title {
+        transform: translateY(-500px);
+    }
+    .slide.active:nth-child(7) .title {
+        transform: translateY(0);
+    }
+ 
+    .slide:nth-child(8) .title {
+        transform: translateX(500px);
+    }
+    .slide.active:nth-child(8) .title {
+        transform: translateX(0);
+    }
+
+    .slide:nth-child(9) .title {
+        transform: translateX(-100);
+    }
+    .slide.active:nth-child(9) .title {
+        transform: translateY(0);
+    }
+
+    .slide:nth-child(10) .title {
+        transform: translateX(500px);
+    }
+    .slide.active:nth-child(10) .title {
+        transform: translateX(0);
+    }
+
+    .slide:nth-child(11) .title {
+        transform: translateX(-500px);
+    }
+    .slide.active:nth-child(11) .title {
+        transform: translateX(0);
+    }
+
+    .slide:nth-child(12) .title {
+        transform: translateX(500px);
+    }
+    .slide.active:nth-child(12) .title {
+        transform: translateX(0);
+    }
+   
+    .slide:nth-child(13) .title {
+        transform: scale(0.5);
+    }
+    .slide.active:nth-child(13) .title {
+        transform: scale(1);
+    }
+
+    .slide:nth-child(14) .title {
+        transform: translateX(500px);
+    }
+    .slide.active:nth-child(14) .title {
+        transform: translateX(0);
+    }
+</style>
 </head>
 
 <body>
@@ -68,70 +219,99 @@
 
   <main class="main">
     <div class="relative">
-    
-    <div id="carouselGroup" class="carousel slide carousel-fade" data-bs-ride="carousel">
-      <div class="video-tags">
-        <div class="banner">
-          <h2 class="animated-heading cap-d"><span>MANAH</span> AEROSPACE & ENGG</h2>
-          <h4 class="animated-heading s-2">Servicing & Maintenance</h4>
-          <h4 class="animated-heading">State of the Art Resources</h4>
-          <h4 class="animated-heading">High end Equipment</h4>
-          <h4 class="animated-heading">Peak Performance and Reliability</h4>
-          <h2 class="animated-heading cap-d"><span>MANAH</span> STEEL & ENGG</h2>
-          <h4 class="animated-heading s-2">State of the Art Manufacturing Capabilities</h4>
-          <h4 class="animated-heading">Top Quality Steel & Iron</h4>
-          <h2 class="animated-heading cap-d"><span>MANAH</span> DYNAMICS</h2>
-          <h4 class="animated-heading s-2">Emerging Technologies</h4>
-          <h4 class="animated-heading">Innovative and Cutting edge Solutions</h4>
-          <h4 class="animated-heading s-2">Smart Electronic Systems</h4>
-          <h4 class="animated-heading">Drones & Aerial Flying</h4>
-          <h4 class="animated-heading">Next-Gen Technologies</h4>
-        </div>
-      </div>
-      <div class="carousel-inner">
+      <div class="slider">
+        <div class="slide active"><span class="title"><span>MANAH</span> AEROSPACE & ENGG</span></div>
+        <div class="slide"><span class="title">Servicing & Maintenance</span></div>
+        <div class="slide"><span class="title">State of the Art Resources</span></div>
+        <div class="slide"><span class="title">High end Equipment</span></div>
+        <div class="slide"><span class="title">Peak Performance and Reliability</span></div>
+        <div class="slide"><span class="title"><span>MANAH</span> STEEL & ENGG</span></div>
+        <div class="slide"><span class="title">State of the Art Manufacturing Capabilities</span></div>
+        <div class="slide"><span class="title">Top Quality Steel & Iron</span></div>
+        <div class="slide"><span class="title"><span>MANAH</span> DYNAMICS</span></div>
+        <div class="slide"><span class="title">Emerging Technologies</span></div>
+        <div class="slide"><span class="title">Innovative and Cutting edge Solutions</span></div>
+        <div class="slide"><span class="title">Smart Electronic Systems</span></div>
+        <div class="slide"><span class="title">Drones & Aerial Flying</span></div>
+        <div class="slide"><span class="title">Next-Gen Technologies</span></div>
+    </div>
+    <!-- <div id="carouselGroup" class="carousel slide carousel-fade video-tags1" data-bs-ride="carousel"> -->
+      <!-- <div class="video-tags">
+        <div class="banner"> -->
+          <!-- <h2 class="animated-heading cap-d"><span>MANAH</span> AEROSPACE & ENGG</h2> -->
+          <!-- <h4 class="animated-heading s-2">Servicing & Maintenance</h4> -->
+          <!-- <h4 class="animated-heading">State of the Art Resources</h4> -->
+          <!-- <h4 class="animated-heading">High end Equipment</h4> -->
+          <!-- <h4 class="animated-heading">Peak Performance and Reliability</h4> -->
+          <!-- <h2 class="animated-heading cap-d"><span>MANAH</span> STEEL & ENGG</h2> -->
+          <!-- <h4 class="animated-heading s-2">State of the Art Manufacturing Capabilities</h4> -->
+          <!-- <h4 class="animated-heading">Top Quality Steel & Iron</h4> -->
+          <!-- <h2 class="animated-heading cap-d"><span>MANAH</span> DYNAMICS</h2> -->
+          <!-- <h4 class="animated-heading s-2">Emerging Technologies</h4> -->
+          <!-- <h4 class="animated-heading">Innovative and Cutting edge Solutions</h4> -->
+          <!-- <h4 class="animated-heading s-2">Smart Electronic Systems</h4> -->
+          <!-- <h4 class="animated-heading">Drones & Aerial Flying</h4> -->
+          <!-- <h4 class="animated-heading">Next-Gen Technologies</h4> -->
+        <!-- </div>
+      </div> -->
+      <!-- <div class="carousel-inner banner1">
         <div class="carousel-item active">
+          <h2 class="animated-heading cap-d"><span>MANAH</span> AEROSPACE & ENGG</h2>
           <img src="assets/img/slides/slide1.jpg" loading="lazy" class="d-block w-100" alt="slide">
         </div>
         <div class="carousel-item">
+          <h4 class="animated-heading s-2">Servicing & Maintenance</h4>
           <img src="assets/img/slides/slide2.jpg" loading="lazy" class="d-block w-100" alt="slide">
         </div>
         <div class="carousel-item">
+          <h4 class="animated-heading">State of the Art Resources</h4>
           <img src="assets/img/slides/slide3.jpg" loading="lazy" class="d-block w-100" alt="slide">
         </div>
         <div class="carousel-item">
+          <h4 class="animated-heading">High end Equipment</h4>
           <img src="assets/img/slides/slide4.jpg" loading="lazy" class="d-block w-100" alt="slide">
         </div>
         <div class="carousel-item">
+          <h4 class="animated-heading">Peak Performance and Reliability</h4>
           <img src="assets/img/slides/slide5.jpg" loading="lazy" class="d-block w-100" alt="slide">
         </div>
         <div class="carousel-item">
+          <h2 class="animated-heading cap-d"><span>MANAH</span> STEEL & ENGG</h2>
           <img src="assets/img/slides/slide6.jpg" loading="lazy" class="d-block w-100" alt="slide">
         </div>
         <div class="carousel-item">
+          <h4 class="animated-heading s-2">State of the Art Manufacturing Capabilities</h4>
           <img src="assets/img/slides/slide7.jpg" loading="lazy" class="d-block w-100" alt="slide">
         </div>
         <div class="carousel-item">
+          <h4 class="animated-heading">Top Quality Steel & Iron</h4>
           <img src="assets/img/slides/slide8.jpg" loading="lazy" class="d-block w-100" alt="slide">
         </div>
         <div class="carousel-item">
+          <h2 class="animated-heading cap-d"><span>MANAH</span> DYNAMICS</h2>
           <img src="assets/img/slides/slide9.jpg" loading="lazy" class="d-block w-100" alt="slide">
         </div>
         <div class="carousel-item">
+          <h4 class="animated-heading s-2">Emerging Technologies</h4>
           <img src="assets/img/slides/slide10.jpg" loading="lazy" class="d-block w-100" alt="slide">
         </div>
         <div class="carousel-item">
+          <h4 class="animated-heading">Innovative and Cutting edge Solutions</h4>
           <img src="assets/img/slides/slide11.jpg" loading="lazy" class="d-block w-100" alt="slide">
         </div>
         <div class="carousel-item">
+          <h4 class="animated-heading s-2">Smart Electronic Systems</h4>
           <img src="assets/img/slides/slide12.jpg" loading="lazy" class="d-block w-100" alt="slide">
         </div>
         <div class="carousel-item">
+          <h4 class="animated-heading">Drones & Aerial Flying</h4>
           <img src="assets/img/slides/slide13.jpg" loading="lazy" class="d-block w-100" alt="slide">
         </div>
         <div class="carousel-item">
+          <h4 class="animated-heading">Next-Gen Technologies</h4>
           <img src="assets/img/slides/slide14.jpg" loading="lazy" class="d-block w-100" alt="slide">
         </div>
-      </div>
+      </div> -->
       <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselGroup" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -140,7 +320,7 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button> -->
-    </div>
+    <!-- </div> -->
     </div>
        
     <!-- Services Section -->
@@ -379,63 +559,16 @@
   <script src="assets/vendor/aos/aos.js"></script>
  
   <script>
-    const headings = document.querySelectorAll('.animated-heading');
-    const ANIMATION_DURATION = 3000 ;
-    // 3630 seconds
-    const animations = [
-    { in: 'slideInLeft', out: 'slideOutRight' },
-    { in: 'slideInRight', out: 'slideOutLeft' },
-];
-let startTime = Date.now();
-    function updateAnimation() {
-      const currentTime = Date.now();
-    const elapsed = currentTime - startTime;
-    
-    // Calculate which number should be showing based on elapsed time
-    const totalCycleDuration = ANIMATION_DURATION * headings.length;
-    const adjustedTime = elapsed % totalCycleDuration;
-    const currentIndex = Math.floor(adjustedTime / ANIMATION_DURATION);
-    
-    // Calculate time within current number's animation
-    const timeInCurrentAnimation = adjustedTime % ANIMATION_DURATION;
-
-    // Reset all headings
-    headings.forEach(heading => {
-        heading.style.animation = '';
-        heading.style.opacity = '0';
-    });
-    
-   // Animate current heading
-   const animation = animations[currentIndex % 2];
-    const heading = headings[currentIndex];
-    
-    if (heading) {
-        heading.style.animation = `${animation.in} 1s forwards, ${animation.out} 1s forwards 4s`;
+    let slides = document.querySelectorAll('.slide');
+    let index = 0;
+    function slideShow() {
+        slides.forEach(slide => slide.classList.remove('active'));
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
     }
-    
-    // Request next frame
-    requestAnimationFrame(updateAnimation);
-}
-
-// Start the animation
-startTime = Date.now();
-requestAnimationFrame(updateAnimation);
+    setInterval(slideShow, 3500);
   </script>
-
-<script>
-  var carouselGroup = document.getElementById('carouselGroup')
-var carousel = new bootstrap.Carousel(carouselGroup, {
-  interval: 3000, // time between slides (in milliseconds)
-  ride: 'carousel'
-});
-
-// Disable the mouseover pause functionality
-carouselGroup.addEventListener('mouseenter', function () {
-  carousel.cycle(); // Keeps the carousel playing on hover
-});
-
-</script>
-  <!-- Main JS File -->
+  
   <script src="assets/js/main.js"></script>
 </body>
 
