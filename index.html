@@ -23,7 +23,6 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -50,6 +49,7 @@
         transition: opacity 1.5s ease-in-out;
         text-transform:uppercase;
     }
+    
     .title >span{font-weight: 600; color: darkgoldenrod; text-transform:uppercase;}
     .slide:nth-child(1) { background-image: url('assets/img/slides/slide1.jpg'); }
     .slide:nth-child(2) { background-image: url('assets/img/slides/slide2.jpg'); }
@@ -177,6 +177,14 @@
     }
     .slide.active:nth-child(14) .title {
         transform: translateX(0);
+    }
+    @media (max-width: 991px) {
+      .slide {font-size: 1.8rem;}
+      .title {padding: 10px 20px;}
+    }
+    @media (max-width: 768px) {
+      .slide {font-size: 1.5rem;}
+      .title {padding: 10px 20px;}
     }
 </style>
 </head>
