@@ -79,7 +79,7 @@ $header .= "Content-type: text/html\r\n";
 $retval = mail ($toemail,$subject,$bdymsg, $header);
 if( $retval == true )
 	{ ?>
-		<script type="text/javascript">window.location.href='contactus.html'; </script> 
+		<script type="text/javascript">window.location.href='forms/tq.php'; </script> 
 		<!-- <script type="text/javascript">header("Location:contactus.php?msg=fail");</script>  -->
     <?
     }	else
