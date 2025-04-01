@@ -1,5 +1,4 @@
 <?php
-error_reporting(0);
 session_start();
 ?>
 <!DOCTYPE html>
@@ -123,7 +122,7 @@ session_start();
         <img src="assets/img/form-bg.jpg" loading="lazy" class="testimonials-bg" alt="bg">
         <div class="container section-title contact pb-0" data-aos="fade-up" data-aos-delay="100">
           <div class="form-contact">
-            <form action="forms/mail.php" method="post" class="php-email-form">
+            <form action="mail.php" method="post" class="php-email-form">
               <div class="row gy-4">
                 <div class="mx-1">
                   <h2>We Would like to hear from you</h2>
