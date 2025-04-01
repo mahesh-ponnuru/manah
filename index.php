@@ -1,3 +1,7 @@
+<?php
+error_reporting(0);
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -214,7 +218,7 @@
           </li>
           <li><a href="javascript:void()">Blog</a></li>
           <!-- <li><a href="ourteam.html">Our Team</a></li> -->
-          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="contactus.php">Contact Us</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
