@@ -47,12 +47,12 @@ session_start();
             <ul>
               <li><a href="portfolio-manadynamics.html">Manah Dynamics</a></li>
               <li><a href="portfolio-manaaerospace.html">Manah Aerospace & Engineering</a></li>
-              <li><a href="javascript:void()">Manah Investments</a></li>
-              <li><a href="javascript:void()">Manah Realty</a></li>
+              <li><a href="#">Manah Investments</a></li>
+              <li><a href="#">Manah Realty</a></li>
               <li><a href="portfolio-manasteel.html">Manah Steel and Engineering</a></li>
             </ul>
           </li>
-          <li><a href="javascript:void()">Blog</a></li>
+          <li><a href="#">Blog</a></li>
           <!-- <li><a href="ourteam.html">Our Team</a></li> -->
           <li><a href="contactus.html" class="active">Contact Us</a></li>
         </ul>
@@ -220,8 +220,8 @@ session_start();
           <ul>
             <li><i class="bi bi-dash-lg"></i> <a href="index.html">Home</a></li>
             <li><i class="bi bi-dash-lg"></i> <a href="aboutus.html">About us</a></li>
-            <li><i class="bi bi-dash-lg"></i> <a href="javascript:void()">Blog</a></li>
-            <!-- <li><i class="bi bi-dash-lg"></i> <a href="javascript:void()">Our Team</a></li> -->
+            <li><i class="bi bi-dash-lg"></i> <a href="#">Blog</a></li>
+            <!-- <li><i class="bi bi-dash-lg"></i> <a href="#">Our Team</a></li> -->
             <li><i class="bi bi-dash-lg"></i> <a href="contactus.html">Contact Us</a></li>
           </ul>
         </div>
