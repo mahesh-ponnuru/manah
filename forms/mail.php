@@ -1,49 +1,94 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "venkat.ch@manah.com";  // Change this to your email
-    $subject = $_POST["sbj"];
-    $name = $_POST["fname"];
-    $email = $_POST["email"];
-    $company = $_POST["company"];
-    $website = $_POST["website"];
-    $query = $_POST["query"];
-    $message = $_POST["msg"];
+if($_SERVER['REQUEST_METHOD']=="POST"){
+extract($_POST);
+$ip = $_SERVER['REMOTE_ADDR'];
+date_default_timezone_set("Asia/Kolkata");
+$date=date("F j, Y, g:i a");
+$url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+$subject = "New contact details posted @ abc.com";
+$toemail = "venkat.ch@manah.com";
 
-    // Validate email
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Invalid email format";
-        exit;
+$bdymsg = "<table width=730 border=0 align=center cellpadding=0 cellspacing=0 class=border_temp>\n
+      <tr>
+        <td align=left valign=top><table width=730 border=0 cellspacing=0 cellpadding=0>
+          
+          <tr>
+            <td align=center valign=top>\n
+        <table width=93% border=0 cellspacing=1 cellpadding=7>
+              <tr>
+                <td colspan=2 align=left valign=middle bgcolor=#F0F0F0><font face=Arial font-weight: bold size=5px style=color:#000 text-decoration:none><strong>$fname 
+    Contact Details</strong></font></td>
+                </tr>\n
+                    
+              <tr>
+                <td width=23% align=left valign=middle bgcolor=#E3E3E3><font face=Arial size=2px style=color:#000 text-decoration:none>Contact Name</font></td>
+                <td width=77% align=left valign=middle bgcolor=#E3E3E3><font face=Arial size=2px style=color:#000 text-decoration:none><strong>
+
+    $fname</strong></font></td>
+              </tr>
+
+              <tr>
+                <td align=left valign=middle bgcolor=#E3E3E3><font face=Arial size=2px style=color:#000 text-decoration:none>Email ID </font></td>
+                <td align=left valign=middle bgcolor=#E3E3E3><font face=Arial size=2px style=color:#000 text-decoration:none=text-decoration:none><strong>
+
+    $email</strong></font></td>
+              </tr>
+                     
+              <tr>
+                <td align=left valign=middle bgcolor=#E3E3E3><font face=Arial size=2px style=color:#000 text-decoration:none>Subject </font></td>
+                <td align=left valign=middle bgcolor=#E3E3E3><font face=Arial size=2px style=color:#000 text-decoration:none=text-decoration:none><strong>
+    $sbj</strong></font></td>
+              </tr>
+
+              <tr>
+                <td align=left valign=middle bgcolor=#E3E3E3><font face=Arial size=2px style=color:#000 text-decoration:none>Company </font></td>
+                <td align=left valign=middle bgcolor=#E3E3E3><font face=Arial size=2px style=color:#000 text-decoration:none=text-decoration:none><strong>
+    $company</strong></font></td>
+              </tr>
+
+              <tr>
+                <td align=left valign=middle bgcolor=#E3E3E3><font face=Arial size=2px style=color:#000 text-decoration:none>Website </font></td>
+                <td align=left valign=middle bgcolor=#E3E3E3><font face=Arial size=2px style=color:#000 text-decoration:none=text-decoration:none><strong>
+    $website</strong></font></td>
+              </tr>
+            
+              <tr>
+                <td align=left valign=middle bgcolor=#E3E3E3><font face=Arial size=2px style=color:#000 text-decoration:none>Query </font></td>
+                <td align=left valign=middle bgcolor=#E3E3E3><font face=Arial size=2px style=color:#000 text-decoration:none=text-decoration:none><strong>
+    $query</strong></font></td>
+              </tr>
+
+              <tr>
+                <td align=left valign=middle bgcolor=#E3E3E3><font face=Arial size=2px style=color:#000 text-decoration:none>Message</font></td>
+                <td align=left valign=middle bgcolor=#E3E3E3><font face=Arial size=2px style=color:#000 text-decoration:none><strong>$msg</strong></font></td>
+              </tr>
+              <tr><td colspan=2 align=left valign=middle bgcolor=#F0F0F0><font face=Arial size=2px style=color:#000><strong>*** This message has been sent from abc.com ***</strong></font></td></tr>
+         
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+      </tr>
+    </table>\n";
+
+$header = "From:  ".  $email . " <no-reply@abc.com>";
+$header .= "MIME-Version: 1.0\r\n";
+$header .= "Content-type: text/html\r\n";
+
+$retval = mail ($toemail,$subject,$bdymsg, $header);
+if( $retval == true )
+	{ ?>
+		<script type="text/javascript">window.location.href='forms/tq.php'; </script> 
+		<!-- <script type="text/javascript">header("Location:contactus.php?msg=fail");</script>  -->
+    <?
+    }	else
+	{
+        header("Location:contactus.html?msg=fail");
     }
-
-    // Email headers
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-
-    // Email message
-    $body = "
-    <html>
-    <head>
-        <title>Contact Form Submission</title>
-    </head>
-    <body>
-        <h2>Contact Form Details</h2>
-        <p><strong>Name:</strong> $name</p>
-        <p><strong>Email:</strong> $email</p>
-        <p><strong>Company:</strong> $company</p>
-        <p><strong>Website:</strong> $website</p>
-        <p><strong>Query:</strong> $query</p>
-        <p><strong>Message:</strong><br> $message</p>
-    </body>
-    </html>";
-
-    // Send email
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Success";
-    } else {
-        echo "Failed to send email.";
-    }
-} else {
-    echo "Invalid request.";
 }
 ?>
+
+
+
+
